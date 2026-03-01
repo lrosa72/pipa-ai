@@ -3,15 +3,18 @@
 > "把AI当大师，而不是工具或员工。"
 >
 
-## 系统概览 (v2.0 - Gemini CLI Native Integration)
+## 系统概览 (v2.1 - 安全加固版)
 
 这套系统从“角色扮演”彻底进化为“实体自动化运行的硅基公司”。借助 **Gemini CLI**，你能够实现：
 
 - ⚡️ **Zero-Config 启动**：抛弃繁琐的复制粘贴。只需在项目根目录唤醒 Gemini，AI 将自动加载 `GEMINI.md` 基石文件，瞬间化身为大总管 Echo。
+- 🛡️ **安全优先 (Safety First)**：硬性边界防止灾难。Token上限、熔断机制、分级权限，不再担心AI“失控”。
+- 📊 **状态管理 (State Management)**：所有任务必须追踪状态（PENDING → DONE），不再担心“AI在干什么”。
+- 🧠 **记忆系统 (Memory System)**：三层记忆架构（长期/中期/短期），AI不再“失忆”。
 - 🎯 **结果导向**：设定战略目标，而非具体任务。
 - 🚀 **实体执行 (Execution over Roleplay)**：不再只是“嘴上说做”，而是真实在后台调用工具编写代码、运行测试、生成文档。
-- 🔄 **自修复闭环 (Self-Healing)**：遇到 Bug 自动尝试至少 3 次不同方案的修复，不拿半成品打扰你。
-- 🔑 **最高权限**：给予AI工具和权限，让它自我运转。
+- 🔄 **自修复闭环 (Self-Healing)**：遇到 Bug 自动尝试最多 2 次不同方案的修复（不是3次！），不拿半成品打扰你。
+- 🔑 **分级权限**：基础/进阶/敏感/禁止四级权限，明确边界而非盲目放权。
 - 🤖 **AI军团**：一个Hub（Echo）+ 两个Spoke（Elon/Yuci）+ 强大的 Sub-Agent 树（含QA、战略研究员等）。
 
 ## 核心架构
@@ -45,7 +48,7 @@
 
 ```
 agentic-engineering/
-├── GEMINI.md                  # 💎 Gemini CLI 原生启动基石 (新增)
+├── GEMINI.md                  # 💎 Gemini CLI 原生启动基石 (安全加固版)
 ├── START-HERE.md              # 🚀 启动指南（从这里开始）
 ├── README.md                  # 本文件
 ├── prompts-core/              # 核心内核（本质身份）
@@ -57,17 +60,36 @@ agentic-engineering/
 │   ├── role-elon.md           # Elon的人类身份
 │   └── role-yuci.md           # Yuci的人类身份
 ├── sub-agents/                # Sub-Agent军团
-│   ├── echo-researcher.md     # 战略研究员 (新增)
+│   ├── echo-researcher.md     # 战略研究员
 │   ├── elon-architect.md      # 架构师
 │   ├── elon-reviewer.md       # 审查员
 │   ├── elon-debugger.md       # 调试员
-│   ├── elon-qa.md             # QA质量保证专家 (新增)
+│   ├── elon-qa.md             # QA质量保证专家
 │   ├── yuci-content.md        # 内容创作者
 │   ├── yuci-community.md      # 社区运营
 │   └── yuci-analytics.md      # 数据分析师
-└── workflows/                 # 工作流和原则
-    ├── hub-and-spoke.md       # Hub-and-Spoke工作流
-    └── three-principles.md    # 三大核心原则
+├── workflows/                 # 工作流和原则（新增安全层）
+│   ├── hub-and-spoke.md       # Hub-and-Spoke工作流
+│   ├── three-principles.md    # 三大核心原则
+│   ├── safety-guardrails.md   # 🛡️ 安全边界与熔断机制 (NEW)
+│   ├── state-management.md    # 📊 任务状态管理协议 (NEW)
+│   └── memory-protocol.md     # 🧠 三层记忆系统 (NEW)
+├── tasks/                     # 任务队列与追踪 (NEW)
+│   ├── queue-current.md       # 本周任务队列
+│   └── archive/               # 已完成任务归档
+├── memory/                    # 记忆系统 (NEW)
+│   ├── project/               # 长期记忆（项目级）
+│   │   ├── architecture-decisions.md  # 架构决策记录
+│   │   ├── lessons-learned.md         # 经验教训库
+│   │   └── context-map.md             # 项目上下文地图
+│   ├── tasks/                 # 中期记忆（任务级）
+│   │   ├── current-cycle.md   # 当前周期概览
+│   │   ├── echo-state.md      # Echo状态快照
+│   │   ├── elon-state.md      # Elon状态快照
+│   │   └── yuci-state.md      # Yuci状态快照
+│   └── conversations/         # 短期记忆（对话级）
+│       └── archive/           # 对话归档
+└── logs/                      # 审计日志
 ```
 
 ## 快速开始

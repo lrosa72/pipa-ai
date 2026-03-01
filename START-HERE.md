@@ -62,33 +62,50 @@ cd "/Users/changsheng1/Desktop/coding/claude code/agentic-engineering"
 # 在Claude Code中执行：
 ```
 
-**在Claude对话中粘贴**：
+**在Claude对话中粘贴**（⚠️ 注意：新安全流程）：
 
 ```
-我要启动Pipa.ai系统。请先阅读你的核心身份和角色配置：
+我要启动Pipa.ai系统。请按以下顺序读取配置：
 
-1. 核心内核（底层本质）：
-   /Users/changsheng1/Desktop/coding/claude code/agentic-engineering/prompts-core/core-identity-echo.md
+## 第一步：安全协议（必须首先读取）
+1. /Users/changsheng1/Desktop/coding/claude code/agentic-engineering/workflows/safety-guardrails.md
+2. /Users/changsheng1/Desktop/coding/claude code/agentic-engineering/workflows/state-management.md
+3. /Users/changsheng1/Desktop/coding/claude code/agentic-engineering/workflows/memory-protocol.md
 
-2. 角色扮演层（人类身份）：
-   /Users/changsheng1/Desktop/coding/claude code/agentic-engineering/prompts-role/role-echo.md
+## 第二步：核心身份
+4. /Users/changsheng1/Desktop/coding/claude code/agentic-engineering/prompts-core/core-identity-echo.md
+5. /Users/changsheng1/Desktop/coding/claude code/agentic-engineering/prompts-role/role-echo.md
 
-3. 工作流程：
-   /Users/changsheng1/Desktop/coding/claude code/agentic-engineering/workflows/hub-and-spoke.md
-   /Users/changsheng1/Desktop/coding/claude code/agentic-engineering/workflows/three-principles.md
+## 第三步：工作流
+6. /Users/changsheng1/Desktop/coding/claude code/agentic-engineering/workflows/hub-and-spoke.md
+7. /Users/changsheng1/Desktop/coding/claude code/agentic-engineering/workflows/three-principles.md
 
-请阅读这些文件，然后以Echo的身份向我介绍你自己，并确认你已准备好开始工作。
+## 第四步：恢复上下文
+8. /Users/changsheng1/Desktop/coding/claude code/agentic-engineering/memory/tasks/current-cycle.md
+9. /Users/changsheng1/Desktop/coding/claude code/agentic-engineering/tasks/queue-current.md
+
+请阅读这些文件，然后以Echo的身份向我汇报：
+1. 系统安全边界已加载
+2. 当前任务队列状态
+3. 你已准备好设定本周目标
 ```
 
-### 验证Echo已正确加载
+### 验证Echo已正确加载（新的安全检查）
 
 如果Echo正确加载，她会：
-1. 用"Chris"或你的名字称呼你（而非"用户"）
-2. 展现她的性格（英式幽默、直接、有条理）
-3. 询问你当前的项目和目标
-4. 主动提出帮你协调Elon和Yuci
+1. ✅ **首先确认安全边界已加载**（新的关键指标）
+2. ✅ 用"Chris"或你的名字称呼你（而非"用户"）
+3. ✅ 展现她的性格（英式幽默、直接、有条理）
+4. ✅ 汇报当前任务队列状态（新的关键指标）
+5. ✅ 询问本周战略目标
+6. ✅ 主动提出帮你协调Elon和Yuci
 
-**如果没有这些特征，说明配置未正确加载**，请重新粘贴配置。
+**关键安全检查**：
+- 如果Echo没有提及"安全边界"或"状态管理"，说明她没有按新流程启动
+- 如果她说"我是AI助手"或"作为一个人工智能"，说明角色封印未加载
+- 如果她没有查看任务队列就给你建议，说明状态管理未启用
+
+**如果出现以上情况，立即停止并重新加载配置。**
 
 ---
 

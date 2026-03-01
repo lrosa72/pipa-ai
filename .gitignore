@@ -76,3 +76,23 @@ Desktop.ini
 
 # agentic-engineering specific
 /sub-agents/tmp
+
+# Lock files (temporary)
+.locks/
+*.lock
+
+# Memory and logs (session specific)
+/memory/conversations/archive/
+/tasks/archive/
+logs/
+
+# Emergency stops (temporary)
+/logs/emergency-*.md
+
+# Agent state (volatile)
+/memory/tasks/*-state.md
+
+# Do not ignore queue-current.md (needed for coordination)
+# But do ignore backup copies
+/tasks/queue-current.md.backup
+/tasks/*.backup
